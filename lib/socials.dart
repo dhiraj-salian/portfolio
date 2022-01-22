@@ -12,17 +12,20 @@ class Socials extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 20,
-      children: [
-        for (var social in socials)
-          RotatingIconAvatar(
-            name: social['name'],
-            path: social['path'],
-            link: social['link'],
-          )
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        spacing: 20,
+        children: [
+          for (var social in socials)
+            ExpandingIconAvatar(
+              name: social['name'],
+              path: social['path'],
+              link: social['link'],
+            )
+        ],
+      ),
     );
   }
 }

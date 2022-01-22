@@ -37,9 +37,12 @@ class GradientBorderCircleAvatar extends StatelessWidget {
 }
 
 class IconAvatar extends StatelessWidget {
-  const IconAvatar(
-      {Key? key, required this.name, required this.path, required this.link})
-      : super(key: key);
+  const IconAvatar({
+    Key? key,
+    required this.name,
+    required this.path,
+    required this.link,
+  }) : super(key: key);
 
   final String name;
   final String path;
@@ -64,9 +67,9 @@ class IconAvatar extends StatelessWidget {
         ),
         child: CircleAvatar(
           backgroundColor: const Color.fromRGBO(23, 21, 30, 1),
-          maxRadius: 50,
+          maxRadius: 30,
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(10.0),
             child: Image.asset(
               path,
               semanticLabel: name,
@@ -79,9 +82,12 @@ class IconAvatar extends StatelessWidget {
 }
 
 class RotatingIconAvatar extends StatelessWidget {
-  const RotatingIconAvatar(
-      {Key? key, required this.name, required this.path, required this.link})
-      : super(key: key);
+  const RotatingIconAvatar({
+    Key? key,
+    required this.name,
+    required this.path,
+    required this.link,
+  }) : super(key: key);
 
   final String name;
   final String path;
@@ -108,6 +114,48 @@ class RotatingIconAvatar extends StatelessWidget {
         return Transform.rotate(
           angle: angle,
           child: myChild,
+        );
+      },
+    );
+  }
+}
+
+class ExpandingIconAvatar extends StatelessWidget {
+  const ExpandingIconAvatar({
+    Key? key,
+    required this.name,
+    required this.path,
+    required this.link,
+  }) : super(key: key);
+
+  final String name;
+  final String path;
+  final String link;
+
+  @override
+  Widget build(BuildContext context) {
+    return TweenAnimationBuilder(
+      child: IconAvatar(
+        name: name,
+        path: path,
+        link: link,
+      ),
+      duration: const Duration(
+        seconds: 1,
+        milliseconds: 500,
+      ),
+      tween: Tween<double>(
+        begin: 0,
+        end: 1,
+      ),
+      curve: Curves.easeInOut,
+      builder: (_, double value, Widget? myChild) {
+        return Transform.scale(
+          scale: value,
+          child: Opacity(
+            opacity: value,
+            child: myChild,
+          ),
         );
       },
     );

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'portfolio',
+      title: 'Dhiraj Salian',
       home: PortfolioPage(),
     );
   }
@@ -32,11 +32,13 @@ class PortfolioPage extends StatefulWidget {
 
 class _PortfolioPageState extends State<PortfolioPage> {
   List _socials = [];
+  var _personal;
 
   @override
   void initState() {
     super.initState();
     readSocialData();
+    readPersonalData();
   }
 
   Future<void> readSocialData() async {
@@ -48,6 +50,15 @@ class _PortfolioPageState extends State<PortfolioPage> {
     });
   }
 
+  Future<void> readPersonalData() async {
+    final String response =
+        await rootBundle.loadString('assets/data/personal.json');
+    final data = await json.decode(response);
+    setState(() {
+      _personal = data;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,9 +66,14 @@ class _PortfolioPageState extends State<PortfolioPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const AnimatedProfile(
-                name: 'Dhiraj Salian',
-              ),
+              if (_personal != null)
+                ExpandingProfile(
+                  name: _personal['name'],
+                  description: _personal['description'],
+                  image: _personal['image'],
+                  borderSize: 5,
+                  radius: 100,
+                ),
               const SizedBox(
                 height: 30,
               ),

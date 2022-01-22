@@ -68,6 +68,7 @@ flutter:
     - assets/icons/icons8-linkedin-100.png
     - assets/icons/icons8-stack-overflow-100.png
     - assets/data/social.json
+    - assets/data/personal.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
