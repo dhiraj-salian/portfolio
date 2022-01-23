@@ -28,6 +28,7 @@ class PortfolioPage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    const Spacer(flex: 8),
                     if (personal != null)
                       ExpandingProfile(
                         name: personal['name'],
@@ -42,6 +43,10 @@ class PortfolioPage extends StatelessWidget {
                     Socials(
                       socials: socials,
                     ),
+                    const Spacer(flex: 8),
+                    const Icon(Icons.keyboard_arrow_up_rounded),
+                    const Text('Swipe Up for Projects'),
+                    const Spacer(flex: 1),
                   ],
                 ),
               ),
