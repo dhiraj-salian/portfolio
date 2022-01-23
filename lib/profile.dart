@@ -83,21 +83,14 @@ class Profile extends StatelessWidget {
           borderSize: borderSize,
           radius: radius,
           assetImage: AssetImage(image),
-          colors: const [
-            Color.fromRGBO(213, 112, 34, 1),
-            Color.fromRGBO(168, 0, 111, 1)
-          ],
+          gradient: getGradient(context),
         ),
         const SizedBox(
           height: 20,
         ),
         Text(
           name,
-          style: const TextStyle(
-            fontFamily: 'DancingScript',
-            color: Colors.white70,
-            fontSize: 50,
-          ),
+          style: Theme.of(context).textTheme.headline1,
           textAlign: TextAlign.center,
         ),
         const SizedBox(
@@ -105,10 +98,7 @@ class Profile extends StatelessWidget {
         ),
         Text(
           description,
-          style: const TextStyle(
-            color: Colors.white54,
-            fontSize: 30,
-          ),
+          style: Theme.of(context).textTheme.headline2,
           textAlign: TextAlign.center,
         )
       ],

@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Portfolio",
+    "description": "A personal portfolio developed in flutter to showcase projects.",
+    "image": "assets/images/portfolio.png"
+  },
+  {
+    "title": "TechBlog - by Dhiraj",
+    "description": "A personal blog site developed using Ruby jekyll framework to share my experiences building projects.",
+    "image": "assets/images/techblog.png",
+    "demoUrl": "https://blogs.dhirajsalian.com/"
+  }
+]
