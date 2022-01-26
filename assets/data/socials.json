@@ -1,27 +1,22 @@
 [
   {
     "name": "linkedin",
-    "path": "assets/icons/icons8-linkedin-100.png",
+    "icon": "assets/icons/icons8-linkedin-100.png",
     "link": "https://www.linkedin.com/in/dhiraj-salian/"
   },
   {
     "name": "github",
-    "path": "assets/icons/icons8-github-100.png",
+    "icon": "assets/icons/icons8-github-100.png",
     "link": "https://github.com/dhiraj-salian"
   },
   {
     "name": "email",
-    "path": "assets/icons/icons8-gmail-logo-100.png",
+    "icon": "assets/icons/icons8-gmail-logo-100.png",
     "link": "mailto:contact@dhirajsalian.com"
   },
   {
-    "name": "stackoverflow",
-    "path": "assets/icons/icons8-stack-overflow-100.png",
-    "link": "https://stackoverflow.com/users/16095929/dhiraj-salian"
-  },
-  {
     "name": "blog",
-    "path": "assets/icons/icons8-google-blog-search-100.png",
+    "icon": "assets/icons/icons8-google-blog-search-100.png",
     "link": "https://blogs.dhirajsalian.com"
   }
 ]

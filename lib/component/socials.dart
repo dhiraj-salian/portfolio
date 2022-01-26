@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'common.dart';
+import '../model/social.dart';
+import 'icon_avatar.dart';
 
 class Socials extends StatelessWidget {
   const Socials({
@@ -8,7 +9,7 @@ class Socials extends StatelessWidget {
     required this.socials,
   }) : super(key: key);
 
-  final List socials;
+  final List<Social> socials;
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +18,13 @@ class Socials extends StatelessWidget {
       child: Wrap(
         alignment: WrapAlignment.center,
         spacing: 20,
+        runSpacing: 10,
         children: [
-          for (var social in socials)
+          for (Social social in socials)
             ExpandingIconAvatar(
-              name: social['name'],
-              path: social['path'],
-              link: social['link'],
+              name: social.name,
+              icon: social.icon,
+              link: social.link,
             )
         ],
       ),

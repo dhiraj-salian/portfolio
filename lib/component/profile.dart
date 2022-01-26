@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'common.dart';
+import '../model/personal.dart';
+import '../component/profile_avatar.dart';
+import '../util/common.dart';
 
 class ExpandingProfile extends StatelessWidget {
   const ExpandingProfile({
     Key? key,
-    required this.name,
-    required this.description,
-    required this.image,
+    required this.personal,
     required this.borderSize,
     required this.radius,
   }) : super(key: key);
 
-  final String name;
-
-  final String description;
-
-  final String image;
+  final Personal personal;
 
   final double borderSize;
 
@@ -26,9 +22,7 @@ class ExpandingProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       child: Profile(
-        name: name,
-        description: description,
-        image: image,
+        personal: personal,
         borderSize: borderSize,
         radius: radius,
       ),
@@ -56,18 +50,12 @@ class ExpandingProfile extends StatelessWidget {
 class Profile extends StatelessWidget {
   const Profile({
     Key? key,
-    required this.name,
-    required this.description,
-    required this.image,
+    required this.personal,
     this.borderSize = 5,
     this.radius = 100,
   }) : super(key: key);
 
-  final String name;
-
-  final String description;
-
-  final String image;
+  final Personal personal;
 
   final double borderSize;
 
@@ -82,14 +70,14 @@ class Profile extends StatelessWidget {
         GradientBorderCircleAvatar(
           borderSize: borderSize,
           radius: radius,
-          assetImage: AssetImage(image),
+          assetImage: AssetImage(personal.image),
           gradient: getGradient(context),
         ),
         const SizedBox(
           height: 20,
         ),
         Text(
-          name,
+          personal.name,
           style: Theme.of(context).textTheme.headline1,
           textAlign: TextAlign.center,
         ),
@@ -97,7 +85,7 @@ class Profile extends StatelessWidget {
           height: 20,
         ),
         Text(
-          description,
+          personal.description,
           style: Theme.of(context).textTheme.headline2,
           textAlign: TextAlign.center,
         )

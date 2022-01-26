@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'common.dart';
-import 'portfolio.dart';
+import 'page/portfolio_page.dart';
+import 'util/common.dart';
 
 void main() {
   runApp(const MyApp());

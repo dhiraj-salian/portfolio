@@ -1,12 +1,12 @@
 [
   {
     "title": "Portfolio",
-    "description": "A personal portfolio developed in flutter to showcase projects.",
+    "description": "A Portfolio application developed using Flutter framework to showcase my projects.",
     "image": "assets/images/portfolio.png"
   },
   {
-    "title": "TechBlog - by Dhiraj",
-    "description": "A personal blog site developed using Ruby jekyll framework to share my experiences building projects.",
+    "title": "TechBlog by Dhiraj",
+    "description": "A blog site developed using Ruby's Jekyll framework to share my experiences on building projects using different tools and technologies.",
     "image": "assets/images/techblog.png",
     "demoUrl": "https://blogs.dhirajsalian.com/"
   }

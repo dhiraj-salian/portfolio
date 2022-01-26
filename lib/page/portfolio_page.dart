@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'profile.dart';
-import 'projects.dart';
-import 'socials.dart';
 
-import 'common.dart';
+import 'projects_page.dart';
+import '../model/personal.dart';
+import '../model/social.dart';
+import '../component/profile.dart';
+import '../component/socials.dart';
+import '../util/common.dart';
+import '../util/client.dart';
 
 class PortfolioPage extends StatelessWidget {
   const PortfolioPage({Key? key}) : super(key: key);
@@ -12,13 +15,17 @@ class PortfolioPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-          future: Future.wait([readPersonalData(), readSocialData()]),
-          initialData: const [null, []],
+          future: Future.wait([getPersonal(), getSocials()]),
           builder: (BuildContext context, AsyncSnapshot<dynamic> data) {
-            dynamic personal = data.data[0], socials = data.data[1];
+            if (!data.hasData) {
+              return getProgressIndicator(context);
+            }
+            Personal personal = Personal.fromJson(data.data[0]);
+            List<Social> socials =
+                List<Social>.from(data.data[1].map((s) => Social.fromJson(s)));
             return GestureDetector(
               onVerticalDragUpdate: (details) {
-                int sensitivity = 8;
+                int sensitivity = 10;
                 if (details.delta.dy < -sensitivity) {
                   Navigator.of(context)
                       .push(createProjectRoute(const ProjectsPage()));
@@ -29,14 +36,11 @@ class PortfolioPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Spacer(flex: 8),
-                    if (personal != null)
-                      ExpandingProfile(
-                        name: personal['name'],
-                        description: personal['description'],
-                        image: personal['image'],
-                        borderSize: 5,
-                        radius: 100,
-                      ),
+                    ExpandingProfile(
+                      personal: personal,
+                      borderSize: 5,
+                      radius: 100,
+                    ),
                     const SizedBox(
                       height: 30,
                     ),
