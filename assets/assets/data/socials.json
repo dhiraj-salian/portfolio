@@ -1,0 +1,22 @@
+[
+  {
+    "name": "linkedin",
+    "icon": "assets/icons/icons8-linkedin-100.png",
+    "link": "https://www.linkedin.com/in/dhiraj-salian/"
+  },
+  {
+    "name": "github",
+    "icon": "assets/icons/icons8-github-100.png",
+    "link": "https://github.com/dhiraj-salian"
+  },
+  {
+    "name": "email",
+    "icon": "assets/icons/icons8-gmail-logo-100.png",
+    "link": "mailto:contact@dhirajsalian.com"
+  },
+  {
+    "name": "blog",
+    "icon": "assets/icons/icons8-google-blog-search-100.png",
+    "link": "https://blogs.dhirajsalian.com"
+  }
+]
