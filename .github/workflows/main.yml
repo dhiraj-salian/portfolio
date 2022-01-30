@@ -14,16 +14,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Flutter Build Web
+      - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '2.8.0'
           channel: 'stable'
         
       - run: flutter pub get
-      - run: flutter format --set-exit-if-changed .    
-      - run: flutter analyze .
-      - run: flutter test
+      
       - run: flutter build web
       
       - name: Deploy
