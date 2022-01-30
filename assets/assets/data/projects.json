@@ -10,5 +10,11 @@
     "description": "A blog site developed using Ruby's Jekyll framework to share my experiences on building projects using different tools and technologies.",
     "image": "assets/images/techblog.png",
     "demoUrl": "https://blogs.dhirajsalian.com/"
+  },
+  {
+    "title": "Competitive Programming",
+    "description": "A Collection of competitive programming problems and their solutions written in Java.",
+    "image": "assets/images/competitive-programming.png",
+    "blogUrl": "https://github.com/dhiraj-salian/competitive-programming"
   }
 ]

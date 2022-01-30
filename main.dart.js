@@ -52600,7 +52600,7 @@ for(s=this.c,r=s.length,q=0;q<s.length;s.length===r||(0,A.C)(s),++q){p=s[q]
 o.push(new A.zb(p.a,p.b,p.c,null))}return new A.eD(B.xp,A.aaE(B.rS,o,10,20),null)}}
 A.As.prototype={
 N(a,b){var s=A.aaq(B.ag),r=s.q.Vr(B.wh,B.wa,B.v,B.wz,B.wF,B.dY),q=s.Y,p=q.a.Vl("DancingScript",50),o=q.b.uH(30),n=q.c.uH(20)
-return new A.r3(B.Co,"portfolio",s.Vk(r,q.Vq(q.y.uH(14),p,o,n)),null)}}
+return new A.r3(B.Co,"Dhiraj Salian",s.Vk(r,q.Vq(q.y.uH(14),p,o,n)),null)}}
 A.SA.prototype={
 wK(){return A.aM(["name",this.a,"description",this.b,"image",this.c],t.N,t.z)},
 gab(a){return this.a}}
