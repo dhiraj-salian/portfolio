@@ -2,7 +2,8 @@
   {
     "title": "Portfolio",
     "description": "A Portfolio application developed using Flutter framework to showcase my projects.",
-    "image": "assets/images/portfolio.png"
+    "image": "assets/images/portfolio.png",
+    "blogUrl": "https://blogs.dhirajsalian.com/develop/flutter/portfolio/2022/01/29/creating-a-portfolio-in-flutter.html"
   },
   {
     "title": "TechBlog by Dhiraj",

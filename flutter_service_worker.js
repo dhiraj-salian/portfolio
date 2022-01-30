@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "index.html": "69c0ee263d00c089233403c2c556d3c3",
-"/": "69c0ee263d00c089233403c2c556d3c3",
+  "index.html": "a43fd097160518c16c96bb59d5c4b9e3",
+"/": "a43fd097160518c16c96bb59d5c4b9e3",
 "version.json": "009c9e65172e010890f7f65fde438006",
 "manifest.json": "84d2ae08bb507982d0663ccf86406a72",
 "main.dart.js": "2688812f8608e5aaf74b11e24b0dc6b4",
@@ -22,7 +22,7 @@ const RESOURCES = {
 "assets/assets/images/me.jpg": "8810fb2e475de59d8a18be1333c5e3c9",
 "assets/assets/images/techblog.png": "56c34de8095d9c15104814be436c7b25",
 "assets/assets/data/socials.json": "129e81803938e4dac98fbf7f52ac7fdd",
-"assets/assets/data/projects.json": "2ec8123fd2413a0bb727d341a221587b",
+"assets/assets/data/projects.json": "9e9d26a6951e46797f9783062367e79f",
 "assets/assets/data/personal.json": "b0b37677568ffa682b47e8cb5b6c515f",
 "assets/assets/fonts/DancingScript-VariableFont_wght.ttf": "796bdaef35c72bb17246391811a5d7c1",
 "assets/assets/icons/icons8-github-100.png": "4c82a226512f0e72186628e6ef4e0b18",
