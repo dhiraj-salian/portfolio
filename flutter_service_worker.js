@@ -3,8 +3,8 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "index.html": "827621da697471f52ca631b86758e71a",
-"/": "827621da697471f52ca631b86758e71a",
+  "index.html": "8294fd97d984cc59de07d8e364e597bf",
+"/": "8294fd97d984cc59de07d8e364e597bf",
 "version.json": "009c9e65172e010890f7f65fde438006",
 "manifest.json": "84d2ae08bb507982d0663ccf86406a72",
 "main.dart.js": "16d331a622683cca299d0b1cf9d6ff50",
@@ -23,7 +23,7 @@ const RESOURCES = {
 "assets/assets/images/techblog.png": "56c34de8095d9c15104814be436c7b25",
 "assets/assets/images/competitive-programming.png": "b2ce9e6cae91a05a4924aa6acd0a2762",
 "assets/assets/data/socials.json": "129e81803938e4dac98fbf7f52ac7fdd",
-"assets/assets/data/projects.json": "b6c9a6529111232d458300dadd25e16a",
+"assets/assets/data/projects.json": "e32ef37f2625d81c8017ffa32d845743",
 "assets/assets/data/personal.json": "b0b37677568ffa682b47e8cb5b6c515f",
 "assets/assets/fonts/DancingScript-VariableFont_wght.ttf": "796bdaef35c72bb17246391811a5d7c1",
 "assets/assets/icons/icons8-github-100.png": "4c82a226512f0e72186628e6ef4e0b18",
