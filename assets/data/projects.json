@@ -3,7 +3,7 @@
     "title": "Portfolio",
     "description": "A Portfolio application developed using Flutter framework to showcase my projects.",
     "image": "assets/images/portfolio.png",
-    "blogUrl": "https://blogs.dhirajsalian.com/develop/flutter/portfolio/2022/01/29/creating-a-portfolio-in-flutter.html"
+    "blogUrl": "https://blogs.dhirajsalian.com/flutter/portfolio/2022/01/30/creating-a-portfolio-in-flutter.html"
   },
   {
     "title": "TechBlog by Dhiraj",
@@ -15,6 +15,6 @@
     "title": "Competitive Programming",
     "description": "A Collection of competitive programming problems and their solutions written in Java.",
     "image": "assets/images/competitive-programming.png",
-    "blogUrl": "https://blogs.dhirajsalian.com/develop/java/competitive-programming/2022/01/31/collection-of-competitive-programming-problems.html"
+    "blogUrl": "https://blogs.dhirajsalian.com/java/programming/2022/01/31/competitive-programming.html"
   }
 ]
