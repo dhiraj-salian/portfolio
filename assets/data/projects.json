@@ -16,5 +16,12 @@
     "description": "A Collection of competitive programming problems and their solutions written in Java.",
     "image": "assets/images/competitive-programming.png",
     "blogUrl": "https://blogs.dhirajsalian.com/java/programming/2022/01/31/competitive-programming.html"
+  },
+  {
+    "title": "Brick Breaker",
+    "description": "A 2D game developed using Unity Engine to understand basics of Game Development.",
+    "image": "assets/images/brick-breaker.png",
+    "demoUrl": "https://brick-breaker.dhirajsalian.com",
+    "blogUrl": "https://blogs.dhirajsalian.com/unity/brick-breaker/2022/02/13/arrange-gameobjects-randomly-in-unity.html"
   }
 ]
