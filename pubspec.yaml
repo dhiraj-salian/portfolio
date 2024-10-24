@@ -66,7 +66,7 @@ flutter:
     - assets/data/projects.json
     - assets/icons/icons8-github-100.png
     - assets/icons/icons8-gmail-logo-100.png
-    - assets/icons/icons8-google-blog-search-100.png
+    - assets/icons/icons8-blog-100.png
     - assets/icons/icons8-linkedin-100.png
     - assets/icons/icons8-stack-overflow-100.png
     - assets/images/me.jpg
