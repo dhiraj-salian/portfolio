@@ -181,7 +181,7 @@ export function Projects() {
     <Section id="projects" label="Projects" gradient="gradient-mesh" dots>
       <Reveal>
         <h2 className="text-3xl md:text-4xl font-display italic text-center mb-4 text-text-primary">
-          Selected Work
+          Featured Projects
         </h2>
       </Reveal>
       <Reveal delay={0.1}>
