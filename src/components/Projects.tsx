@@ -112,11 +112,11 @@ function ProjectThumbnail({ id }: { id: string }) {
 }
 
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLAnchorElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const shouldReduce = useReducedMotion();
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (shouldReduce) return;
     const el = cardRef.current;
     if (!el) return;
@@ -127,9 +127,13 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   };
 
   return (
-    <motion.article
+    <motion.a
       ref={cardRef}
-      className="group relative rounded-xl border border-white/[0.04] bg-cosmic-800/40 overflow-hidden"
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${project.title} — opens in a new tab`}
+      className="group relative block rounded-xl border border-white/[0.04] bg-cosmic-800/40 overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-indigo/60 focus-visible:ring-offset-2 focus-visible:ring-offset-cosmic-950"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setMousePos({ x: 0, y: 0 })}
       whileHover={shouldReduce ? {} : { y: -4 }}
@@ -137,7 +141,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
     >
       {/* Thumbnail */}
       <div
-        className="relative h-48 md:h-52 overflow-hidden"
+        className="relative h-48 md:h-52 overflow-hidden pointer-events-none"
         style={{
           transform: shouldReduce ? 'none' : `translate(${mousePos.x}px, ${mousePos.y}px) scale(1.05)`,
           transition: 'transform 0.2s ease-out',
@@ -148,7 +152,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
       {/* Glow border on hover */}
       <div
-        className="absolute inset-0 rounded-xl border opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        className="absolute inset-0 rounded-xl border opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
         style={{ borderColor: `${project.color}30` }}
         aria-hidden="true"
       />
@@ -161,18 +165,15 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         <p className="text-text-secondary text-sm leading-relaxed mb-4">
           {project.description}
         </p>
-        <a
-          href={project.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-mono tracking-wide group/link"
+        <span
+          className="inline-flex items-center gap-1.5 text-xs font-mono tracking-wide"
           style={{ color: project.colorLight }}
         >
           Visit
-          <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-        </a>
+          <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </span>
       </div>
-    </motion.article>
+    </motion.a>
   );
 }
 
