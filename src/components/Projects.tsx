@@ -49,6 +49,33 @@ function ProjectThumbnail({ id }: { id: string }) {
         <text x="200" y="190" textAnchor="middle" fill="#67e8f9" fontSize="9" fontFamily="JetBrains Mono, monospace">168 tests</text>
       </svg>
     ),
+    skill: (
+      <svg viewBox="0 0 400 240" className="w-full h-full" aria-hidden="true">
+        <defs>
+          <linearGradient id="skill-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#a78bfa" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="#fb7185" stopOpacity="0.1" />
+          </linearGradient>
+        </defs>
+        <rect width="400" height="240" fill="url(#skill-grad)" />
+        {/* Vector path traces */}
+        <path d="M100 180 L160 100 L200 140 L260 80 L300 120" stroke="#a78bfa" strokeWidth="1.8" fill="none" opacity="0.7" />
+        <path d="M120 200 L180 130 L220 160 L280 100 L320 140" stroke="#fb7185" strokeWidth="1.2" fill="none" opacity="0.5" />
+        {/* Anchor nodes */}
+        {[[100,180],[160,100],[200,140],[260,80],[300,120]].map(([cx,cy], i) => (
+          <g key={i}>
+            <circle cx={cx} cy={cy} r="5" fill="#0a0c18" stroke="#a78bfa" strokeWidth="1.5" />
+            <circle cx={cx} cy={cy} r="2" fill="#c4b5fd" />
+          </g>
+        ))}
+        {/* Bezier handles */}
+        <path d="M160 100 Q180 80 200 140" stroke="#c4b5fd" strokeWidth="0.5" fill="none" opacity="0.4" strokeDasharray="2 2" />
+        <path d="M200 140 Q230 110 260 80" stroke="#c4b5fd" strokeWidth="0.5" fill="none" opacity="0.4" strokeDasharray="2 2" />
+        {/* Label */}
+        <rect x="160" y="200" width="80" height="20" rx="4" fill="#0a0c18" stroke="#a78bfa" strokeWidth="0.5" opacity="0.7" />
+        <text x="200" y="213" textAnchor="middle" fill="#c4b5fd" fontSize="9" fontFamily="JetBrains Mono, monospace">agent.skill</text>
+      </svg>
+    ),
     brick: (
       <svg viewBox="0 0 400 240" className="w-full h-full" aria-hidden="true">
         <defs>

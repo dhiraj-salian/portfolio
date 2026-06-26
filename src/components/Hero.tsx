@@ -50,7 +50,7 @@ export function Hero() {
         {/* Subtitle */}
         <Reveal delay={0.6}>
           <p className="text-hero-sub text-text-secondary font-mono mb-12 max-w-2xl mx-auto">
-            Software engineer · Indie hacker · Goa, India
+            Senior Software Engineer · Bengaluru, India
           </p>
         </Reveal>
 

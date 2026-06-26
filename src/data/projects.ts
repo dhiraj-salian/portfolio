@@ -11,7 +11,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Inspyry',
-    description: 'Cloudflare-native AI SVG generator. Single-pass raster → vector pipeline with VTracer WASM. Production SaaS.',
+    description: 'AI SVG generator on Cloudflare. Single-pass raster → vector pipeline with VTracer WASM. Production SaaS.',
     url: 'https://inspyry.com',
     color: '#7c5cff',
     colorLight: '#a78bfa',
@@ -20,12 +20,21 @@ export const projects: Project[] = [
   },
   {
     title: 'openclaw-nvidia-speech',
-    description: 'Zero-dep OpenClaw plugin for NVIDIA speech. 168 tests. Published to npm.',
+    description: 'OpenClaw plugin for NVIDIA TTS (Magpie) and STT (Parakeet). Zero deps, 168 tests, published to npm.',
     url: 'https://github.com/dhiraj-salian/openclaw-nvidia-speech',
     color: '#22d3ee',
     colorLight: '#67e8f9',
     gradient: 'from-accent-cyan/20 to-accent-sky/10',
     svgId: 'nvidia',
+  },
+  {
+    title: 'inspyry-vector-generator-skill',
+    description: 'Agent skill for creating vector images — logos, icons, mascots, illustrations. MIT licensed.',
+    url: 'https://github.com/dhiraj-salian/inspyry-vector-generator-skill',
+    color: '#a78bfa',
+    colorLight: '#c4b5fd',
+    gradient: 'from-accent-indigo/20 to-accent-rose/10',
+    svgId: 'skill',
   },
   {
     title: 'Brick Breaker',

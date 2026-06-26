@@ -34,18 +34,29 @@ export function About() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="text-text-secondary leading-relaxed text-[15px]">
-              I'm a software engineer and indie hacker based in Goa. I build
-              production systems at the intersection of cloud infrastructure,
-              AI, and product craft — and I like to understand things down to
-              the math.
+              I'm a Senior Software Engineer based in Bengaluru with 8+ years
+              building backend services and distributed systems across
+              enterprise cloud platforms — most recently leading multi-cloud
+              architecture at Omnissa (formerly VMware EUC).
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-3 text-text-secondary leading-relaxed text-[15px]">
-              Currently shipping <span className="text-gradient-indigo">Inspyry</span> (AI SVG
-              generator), maintaining OpenClaw plugins like{' '}
-              <span className="text-gradient-cyan">openclaw-nvidia-speech</span>, and exploring
-              what comes next.
+              On the side I ship indie products —{' '}
+              <span className="text-gradient-indigo">Inspyry</span> is live in
+              production — and contribute to the OpenClaw ecosystem with
+              plugins like{' '}
+              <span className="text-gradient-cyan">openclaw-nvidia-speech</span>.
+              I write about AI and ML at{' '}
+              <a
+                href="https://blogs.dhirajsalian.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-text-muted/40 underline-offset-2 hover:text-text-primary hover:decoration-text-secondary transition-colors"
+              >
+                blogs.dhirajsalian.com
+              </a>
+              .
             </p>
           </Reveal>
         </div>
