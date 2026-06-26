@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cosmic-950: #05060a;
+    --color-cosmic-900: #0a0c18;
+    --color-cosmic-800: #111427;
+    --color-cosmic-700: #1a1d35;
+    --color-accent-indigo: #7c5cff;
+    --color-accent-indigo-light: #a78bfa;
+    --color-accent-cyan: #22d3ee;
+    --color-accent-cyan-light: #67e8f9;
+    --color-accent-amber: #f59e0b;
+    --color-accent-amber-light: #fde047;
+    --color-accent-rose: #fb7185;
+    --color-accent-rose-light: #f472b6;
+    --color-accent-sky: #38bdf8;
+    --color-accent-sky-light: #7dd3fc;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+    background-color: var(--color-cosmic-950);
+    color: #e7e9f0;
+  }
+
+  body {
+    font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, var(--color-cosmic-950) 0%, var(--color-cosmic-900) 100%);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(124, 92, 255, 0.3);
+    color: #e7e9f0;
+  }
+}
+
+@layer components {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+  }
+
+  .gradient-mesh {
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(124, 92, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(251, 113, 133, 0.03) 0%, transparent 50%);
+  }
+
+  .text-gradient-indigo {
+    background: linear-gradient(135deg, #7c5cff 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #22d3ee 0%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #f59e0b 0%, #fde047 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #fb7185 0%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sky {
+    background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-indigo {
+    box-shadow: 0 0 20px rgba(124, 92, 255, 0.15), 0 0 60px rgba(124, 92, 255, 0.05);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15), 0 0 60px rgba(34, 211, 238, 0.05);
+  }
+
+  .glow-amber {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15), 0 0 60px rgba(245, 158, 11, 0.05);
+  }
+
+  .glow-rose {
+    box-shadow: 0 0 20px rgba(251, 113, 133, 0.15), 0 0 60px rgba(251, 113, 133, 0.05);
+  }
+
+  .glow-sky {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), 0 0 60px rgba(56, 189, 248, 0.05);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(138, 145, 166, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .noise-overlay {
+    display: none;
+  }
+}

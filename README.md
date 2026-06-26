@@ -1,20 +1,37 @@
-# Portfolio
+# Dhiraj Salian — Portfolio
 
-A static portfolio application for showcasing projects. It is built using flutter framework.
+Personal portfolio built with Vite + React + TypeScript. Cosmic dark theme, 3D backgrounds, smooth scroll, and scroll-triggered animations.
 
-![Portfolio Page](assets/images/portfolio.png)
+## Stack
 
-## How to use
+- **Vite** — build tool
+- **React 18 + TypeScript** — UI
+- **Tailwind CSS v3** — styling
+- **Framer Motion** — animations
+- **@react-three/fiber + drei** — 3D cosmic background
+- **Lenis** — smooth scroll
+- **Lucide React** — icons
 
-1. Clone the project.
-2. Update the assets.
-3. Run `flutter build web`.
-4. The application will be built in `build/web` directory.
+## Development
 
-## Demo
+```bash
+npm install
+npm run dev
+```
 
-You can access the live website at [dhirajsalian.com](https://dhirajsalian.com)
+## Build
 
-## Contributing
+```bash
+npm run build
+npm run preview
+```
 
-If you would like to contribute, feel free to create a pull request with your changes/fixes.
+## Deployment
+
+See [DEPLOY.md](./DEPLOY.md) for GitHub Pages + custom domain setup.
+
+## Design
+
+- **Font pairing**: Instrument Serif (display) + JetBrains Mono (code/accents) + Geist (body)
+- **Palette**: Cosmic dark base with indigo, cyan, amber, rose, and sky accents
+- **Theme**: A journey through software engineering, indie hacking, AI/math, spirituality, and space
