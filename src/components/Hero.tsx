@@ -6,7 +6,7 @@ import { Section } from '@/components/ui/Section';
 
 const HeroCanvas = lazy(() => import('@/components/HeroCanvas'));
 
-const headline = 'Building at the Edge of Code & Consciousness';
+const headline = 'Dhiraj Salian';
 const words = headline.split(' ');
 
 export function Hero() {
@@ -48,33 +48,22 @@ export function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <Reveal delay={1.5}>
+        <Reveal delay={0.6}>
           <p className="text-hero-sub text-text-secondary font-mono mb-12 max-w-2xl mx-auto">
-            Software engineer and indie hacker crafting tools at the intersection of
-            <span className="text-gradient-indigo"> engineering</span>,
-            <span className="text-gradient-amber"> AI</span>, and
-            <span className="text-gradient-rose"> consciousness</span>.
+            Software engineer · Indie hacker · Goa, India
           </p>
         </Reveal>
 
-        {/* CTAs */}
-        <Reveal delay={1.8}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* CTA */}
+        <Reveal delay={0.9}>
+          <div className="flex items-center justify-center">
             <Magnetic>
               <a
                 href="#projects"
                 className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-accent-indigo/15 border border-accent-indigo/30 text-accent-indigo-light font-mono text-sm tracking-wide hover:bg-accent-indigo/25 hover:border-accent-indigo/50 transition-all duration-300"
               >
-                Explore the work
+                View projects
                 <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href="#philosophy"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-text-muted/20 text-text-secondary font-mono text-sm tracking-wide hover:border-text-secondary/40 hover:text-text-primary transition-all duration-300"
-              >
-                Read manifest
               </a>
             </Magnetic>
           </div>

@@ -4,11 +4,8 @@ import { CosmicLoader } from '@/components/CosmicLoader';
 import { SmoothScroll } from '@/components/SmoothScroll';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
-import { Pillars } from '@/components/Pillars';
 import { Projects } from '@/components/Projects';
-import { Philosophy } from '@/components/Philosophy';
-import { Journey } from '@/components/Journey';
-import { Footer } from '@/components/Footer';
+import { Contact } from '@/components/Contact';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -30,11 +27,8 @@ export default function App() {
         <main id="main" className={loading ? 'overflow-hidden max-h-screen' : ''}>
           <Hero />
           <About />
-          <Pillars />
           <Projects />
-          <Philosophy />
-          <Journey />
-          <Footer />
+          <Contact />
         </main>
       </SmoothScroll>
     </>
