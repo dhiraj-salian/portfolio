@@ -16,6 +16,8 @@ const config: Config = {
           'indigo-light': '#a78bfa',
           cyan: '#22d3ee',
           'cyan-light': '#67e8f9',
+          emerald: '#2EBE9C',
+          'emerald-light': '#5DD3B5',
           amber: '#f59e0b',
           'amber-light': '#fde047',
           rose: '#fb7185',

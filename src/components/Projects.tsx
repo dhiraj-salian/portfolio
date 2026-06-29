@@ -28,6 +28,76 @@ function ProjectThumbnail({ id }: { id: string }) {
         <text x="200" y="210" textAnchor="middle" fill="#a78bfa" fontSize="11" fontFamily="JetBrains Mono, monospace">AI → SVG</text>
       </svg>
     ),
+    buffer: (
+      <svg viewBox="0 0 400 240" className="w-full h-full" aria-hidden="true">
+        <defs>
+          <linearGradient id="buffer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2EBE9C" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="#5DD3B5" stopOpacity="0.1" />
+          </linearGradient>
+        </defs>
+        <rect width="400" height="240" fill="url(#buffer-grad)" />
+
+        {/* Queue timeline — horizontal line */}
+        <line x1="60" y1="80" x2="340" y2="80" stroke="#2EBE9C" strokeWidth="1" opacity="0.35" />
+
+        {/* Scheduled post cards stacked along the timeline */}
+        <g opacity="0.85">
+          <rect x="70" y="55" width="64" height="48" rx="4" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.7" />
+          <line x1="78" y1="68" x2="120" y2="68" stroke="#5DD3B5" strokeWidth="1" opacity="0.6" />
+          <line x1="78" y1="76" x2="110" y2="76" stroke="#5DD3B5" strokeWidth="1" opacity="0.4" />
+          <line x1="78" y1="84" x2="116" y2="84" stroke="#5DD3B5" strokeWidth="1" opacity="0.4" />
+          <circle cx="78" cy="94" r="2" fill="#5DD3B5" opacity="0.6" />
+        </g>
+
+        <g opacity="0.9">
+          <rect x="158" y="45" width="64" height="68" rx="4" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.85" />
+          <line x1="166" y1="58" x2="208" y2="58" stroke="#5DD3B5" strokeWidth="1" opacity="0.7" />
+          <line x1="166" y1="66" x2="200" y2="66" stroke="#5DD3B5" strokeWidth="1" opacity="0.5" />
+          <line x1="166" y1="74" x2="210" y2="74" stroke="#5DD3B5" strokeWidth="1" opacity="0.5" />
+          <line x1="166" y1="82" x2="194" y2="82" stroke="#5DD3B5" strokeWidth="1" opacity="0.4" />
+          <circle cx="166" cy="104" r="2" fill="#5DD3B5" opacity="0.7" />
+        </g>
+
+        <g opacity="0.8">
+          <rect x="246" y="55" width="64" height="48" rx="4" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.7" />
+          <line x1="254" y1="68" x2="296" y2="68" stroke="#5DD3B5" strokeWidth="1" opacity="0.6" />
+          <line x1="254" y1="76" x2="288" y2="76" stroke="#5DD3B5" strokeWidth="1" opacity="0.4" />
+          <line x1="254" y1="84" x2="292" y2="84" stroke="#5DD3B5" strokeWidth="1" opacity="0.4" />
+          <circle cx="254" cy="94" r="2" fill="#5DD3B5" opacity="0.6" />
+        </g>
+
+        {/* Schedule clock nodes on the timeline */}
+        {[102, 190, 278].map((cx, i) => (
+          <g key={i} opacity="0.85">
+            <circle cx={cx} cy="80" r="6" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1.2" />
+            <circle cx={cx} cy="80" r="2" fill="#5DD3B5" />
+          </g>
+        ))}
+
+        {/* Channel dots — Twitter, LinkedIn, Instagram */}
+        <g transform="translate(80, 150)">
+          <circle cx="0" cy="0" r="14" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.8" />
+          <text x="0" y="3" textAnchor="middle" fill="#5DD3B5" fontSize="9" fontFamily="JetBrains Mono, monospace">X</text>
+        </g>
+        <g transform="translate(140, 150)">
+          <circle cx="0" cy="0" r="14" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.8" />
+          <text x="0" y="3" textAnchor="middle" fill="#5DD3B5" fontSize="9" fontFamily="JetBrains Mono, monospace">in</text>
+        </g>
+        <g transform="translate(200, 150)">
+          <circle cx="0" cy="0" r="14" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="1" opacity="0.8" />
+          <text x="0" y="3" textAnchor="middle" fill="#5DD3B5" fontSize="9" fontFamily="JetBrains Mono, monospace">IG</text>
+        </g>
+
+        {/* Schedule arrow pointing right */}
+        <line x1="230" y1="150" x2="310" y2="150" stroke="#2EBE9C" strokeWidth="1" opacity="0.5" strokeDasharray="3 3" />
+        <path d="M310 146 L320 150 L310 154 Z" fill="#2EBE9C" opacity="0.6" />
+
+        {/* Label */}
+        <rect x="150" y="195" width="100" height="22" rx="4" fill="#0a0c18" stroke="#2EBE9C" strokeWidth="0.5" opacity="0.85" />
+        <text x="200" y="210" textAnchor="middle" fill="#5DD3B5" fontSize="10" fontFamily="JetBrains Mono, monospace">post · queue · ship</text>
+      </svg>
+    ),
     nvidia: (
       <svg viewBox="0 0 400 240" className="w-full h-full" aria-hidden="true">
         <defs>

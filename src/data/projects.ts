@@ -19,6 +19,15 @@ export const projects: Project[] = [
     svgId: 'inspyry',
   },
   {
+    title: 'buffer-api-skill',
+    description: 'OpenClaw-compatible agent skill for Buffer’s GraphQL API — post, schedule, delete, channels. Python, MIT.',
+    url: 'https://github.com/dhiraj-salian/buffer-api-skill',
+    color: '#2EBE9C',
+    colorLight: '#5DD3B5',
+    gradient: 'from-accent-emerald/20 to-accent-cyan/10',
+    svgId: 'buffer',
+  },
+  {
     title: 'openclaw-nvidia-speech',
     description: 'OpenClaw plugin for NVIDIA TTS (Magpie) and STT (Parakeet). Zero deps, 168 tests, published to npm.',
     url: 'https://github.com/dhiraj-salian/openclaw-nvidia-speech',
