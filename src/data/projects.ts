@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     title: 'openclaw-nvidia-speech',
-    description: 'OpenClaw plugin for NVIDIA TTS (Magpie) and STT (Parakeet). Zero deps, 168 tests, published to npm.',
+    description: 'OpenClaw plugin for NVIDIA TTS (Magpie) and STT (Parakeet). Zero deps, published to npm.',
     url: 'https://github.com/dhiraj-salian/openclaw-nvidia-speech',
     color: '#22d3ee',
     colorLight: '#67e8f9',

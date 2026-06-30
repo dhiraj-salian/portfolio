@@ -116,7 +116,7 @@ function ProjectThumbnail({ id }: { id: string }) {
         <path d="M80 120 Q130 90 180 120 Q230 150 280 120 Q310 100 320 110" stroke="#38bdf8" strokeWidth="1" fill="none" opacity="0.4" />
         {/* Badge */}
         <rect x="160" y="175" width="80" height="22" rx="4" fill="#0a0c18" stroke="#22d3ee" strokeWidth="0.5" opacity="0.8" />
-        <text x="200" y="190" textAnchor="middle" fill="#67e8f9" fontSize="9" fontFamily="JetBrains Mono, monospace">168 tests</text>
+        <text x="200" y="190" textAnchor="middle" fill="#67e8f9" fontSize="9" fontFamily="JetBrains Mono, monospace">zero deps · npm</text>
       </svg>
     ),
     skill: (
